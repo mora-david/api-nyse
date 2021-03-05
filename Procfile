@@ -1,1 +1,1 @@
-web: gunicorn appnyse.wsgi --log-file -
+web: gunicorn nyseApi.wsgi --log-file -
