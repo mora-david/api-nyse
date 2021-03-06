@@ -25,7 +25,7 @@ class EmpresaViewSet(ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         url = 'https://www.findata.co.nz/markets/NYSE/symbols/' + request.data['simbolo'][0] + '.htm'
-        r = request.get(url)
+        r = requests.get(url)
 
         if not request.data['simbolo'][0] in r:
             return {'error':'el simbolo no se encuentra'}
