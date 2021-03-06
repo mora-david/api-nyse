@@ -81,14 +81,14 @@ WSGI_APPLICATION = 'nyseApi.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-"""
+
 
 
 """
@@ -103,19 +103,19 @@ DATABASES = {
     }
 }
 """
-
+"""
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
 }
-
+"""
 #CORS_ORIGIN_ALLOW_ALL = True
 
 
 #CORS_ALLOWED_ORIGINS = ['*']
 CORS_ALLOWED_ORIGINS = [
-    "https://hungry-thompson-a950d5.netlify.app/",
+    "https://hungry-thompson-a950d5.netlify.app",
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
