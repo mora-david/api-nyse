@@ -114,9 +114,10 @@ DATABASES = {
 
 
 #CORS_ALLOWED_ORIGINS = ['*']
-CORS_ALLOWED_ORIGINS = [
-    "https://hungry-thompson-a950d5.netlify.app",
-]
+#CORS_ALLOWED_ORIGINS = [
+ #   "https://hungry-thompson-a950d5.netlify.app",
+#]
+CORS_ALLOW_ALL_ORIGINS = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
