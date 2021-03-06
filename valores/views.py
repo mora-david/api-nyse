@@ -29,9 +29,9 @@ class EmpresaViewSet(ModelViewSet):
             r = requests.get(url)
 
             if not request.data['simbolo'][0] in r:
-                return {'error':'el simbolo no se encuentra'}
+                return Response({'error':'el simbolo no se encuentra'})
         except Exception as e:
-            return {'error':e}
+            return Response({'error':e})
 
 
 
