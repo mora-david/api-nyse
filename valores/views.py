@@ -28,9 +28,10 @@ class EmpresaViewSet(ModelViewSet):
             url = 'https://www.findata.co.nz/markets/NYSE/symbols/' + str(request.data['simbolo'][0]) + '.htm'
             r = requests.get(url)
 
-            if not request.data['simbolo'][0] in r:
-                #return Response({'error':'el simbolo no se encuentra'})
-                return Response({'error':r})
+            if not request.data['simbolo'] in str(r.content):
+                return Response({'error':'el simbolo no se encuentra'})
+            else:
+                pass
         except Exception as e:
             return Response({'error':e})
 
