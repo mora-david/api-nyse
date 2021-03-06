@@ -115,7 +115,7 @@ DATABASES = {
 
 #CORS_ALLOWED_ORIGINS = ['*']
 CORS_ALLOWED_ORIGINS = [
-    "https://nyse-app-add.herokuapp.com/",
+    "https://hungry-thompson-a950d5.netlify.app/",
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
