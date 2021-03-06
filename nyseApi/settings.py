@@ -58,10 +58,6 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-#CORS_ORIGIN_WHITELIST = [
- # 'https://hungry-thompson-a950d5.netlify.app',
-#]
-
 ROOT_URLCONF = 'nyseApi.urls'
 
 TEMPLATES = [
@@ -121,7 +117,7 @@ DATABASES = {
 #CORS_ALLOWED_ORIGINS = [
  #   "https://hungry-thompson-a950d5.netlify.app",
 #]
-CORS_ALLOW_ALL_ORIGINS = True
+
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
