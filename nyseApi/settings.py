@@ -46,6 +46,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -53,10 +55,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'nyseApi.urls'
 
@@ -110,13 +112,8 @@ DATABASES = {
     )
 }
 
-#CORS_ORIGIN_ALLOW_ALL = True
 
 
-#CORS_ALLOWED_ORIGINS = ['*']
-#CORS_ALLOWED_ORIGINS = [
- #   "https://hungry-thompson-a950d5.netlify.app",
-#]
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
