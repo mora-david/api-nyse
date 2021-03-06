@@ -110,11 +110,13 @@ DATABASES = {
     )
 }
 
-CORS_ORIGIN_ALLOW_ALL = True
+#CORS_ORIGIN_ALLOW_ALL = True
 
 
 #CORS_ALLOWED_ORIGINS = ['*']
-
+CORS_ALLOWED_ORIGINS = [
+    "https://nyse-app-add.herokuapp.com/",
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
