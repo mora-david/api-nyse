@@ -1,3 +1,4 @@
+import requests
 from django.shortcuts import render
 
 # Create your views here.
@@ -21,7 +22,16 @@ class EmpresaViewSet(ModelViewSet):
     #     else:
     #         return LibroSerializer
 
+
     def create(self, request, *args, **kwargs):
+        url = 'https://www.findata.co.nz/markets/NYSE/symbols/' + request.data['simbolo'][0] + '.htm'
+        r = request.get(url)
+
+        if not request.data['simbolo'][0] in r:
+            return {'error':'el simbolo no se encuentra'}
+
+
+
         empresa = Empresa.objects.create(nombre=request.data['nombre'],descripcion=request.data['descripcion'],
                                   simbolo=request.data['simbolo'])
 
