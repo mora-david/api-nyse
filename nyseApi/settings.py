@@ -58,10 +58,9 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = (
+CORS_ORIGIN_WHITELIST = [
   'https://hungry-thompson-a950d5.netlify.app',
-  '127.0.0.1:3000'
-)
+]
 
 ROOT_URLCONF = 'nyseApi.urls'
 
