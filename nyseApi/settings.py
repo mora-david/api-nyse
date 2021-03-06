@@ -113,7 +113,7 @@ DATABASES = {
 CORS_ORIGIN_ALLOW_ALL = True
 
 
-CORS_ALLOWED_ORIGINS = ['*']
+#CORS_ALLOWED_ORIGINS = ['*']
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
